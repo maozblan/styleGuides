@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from "$app/paths";
 	import { page } from "$app/state";
 	import "@fontsource/anton";
 	import "@fontsource/lato";
@@ -25,7 +26,7 @@
 	<div id="content" class="row">
 		<nav class="col">
 			{#each pages as p (p)}
-				<a href="/{p}" class:active={page.url.pathname === `/${p}`}>{p}</a>
+				<a href="{base}/{p}" class:active={page.url.pathname === `${base}/${p}`}>{p}</a>
 			{/each}
 		</nav>
 		<div class="col">
