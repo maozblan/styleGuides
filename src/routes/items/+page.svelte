@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Img from "$lib/components/Img.svelte";
 	import "@fontsource/lato";
 </script>
 
@@ -26,7 +27,15 @@
 
 <br />
 
-<p>there are currently no examples... sorry.</p>
+<p>
+	below is the only item we have in game so far and a bit unconventional due to
+	placement location and sizing. however, it's a good reference for item/icon
+	simplicity and allowance for variation (the sleeve or the coffee can be
+	colored differently).
+</p>
+<div class="row">
+	<Img id="coffee" desc="coffee" size={6} />
+</div>
 
 <style>
 	* {

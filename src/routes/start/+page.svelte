@@ -53,6 +53,13 @@
 
 <br />
 
+<p>
+	if you would like a copy of any SVGs used in this guide, you can find them in
+	src/assets folder of the game repo. or alternatively, contact me.
+</p>
+
+<br />
+
 <p>rest of the information can be found by using the nav bar to your left.</p>
 <p>good luck, have fun, and thank you :D</p>
 
