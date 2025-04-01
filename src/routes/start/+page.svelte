@@ -14,7 +14,7 @@
 	</li>
 	<li>
 		sizes are to be relatively small (see individual sections for sizes)
-		probably just stay under 300x300px or 500x500px if really necessary
+		probably just stay under 500x500px
 	</li>
 	<li>when in doubt, make it simple</li>
 </ul>
