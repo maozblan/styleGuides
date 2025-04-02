@@ -1,8 +1,6 @@
 <script lang="ts">
   import { base } from "$app/paths";
 	import { page } from "$app/state";
-	import "@fontsource/anton";
-	import "@fontsource/lato";
 
 	const pages: string[] = [
 		"start",
@@ -36,56 +34,4 @@
 </div>
 
 <style>
-	div.everything-bagel {
-		height: 100%;
-		width: 100%;
-		overflow: hidden;
-	}
-	h1 {
-		font-family: "Anton", sans-serif;
-	}
-	p {
-		font-family: "Lato", sans-serif;
-	}
-	#header {
-		margin-bottom: 1rem;
-		h1,
-		p {
-			text-align: center;
-		}
-	}
-	#content {
-		flex-grow: 1;
-		height: 0;
-
-		nav {
-			width: 20%;
-			height: 100%;
-			a {
-				color: var(--text);
-				padding: 1rem 1rem;
-				font-family: "Anton", sans-serif;
-				font-stretch: expanded;
-				letter-spacing: 0.1rem;
-				text-align: left;
-				text-decoration: none;
-				&:hover,
-				&:active {
-					text-decoration: none;
-					color: var(--ac);
-				}
-				&.active {
-					color: var(--ac);
-					text-align: right;
-				}
-			}
-		}
-		& > div {
-			width: 80%;
-			height: 100%;
-			border-left: 0.5rem solid var(--ac);
-			padding: 1rem;
-			overflow: auto;
-		}
-	}
 </style>

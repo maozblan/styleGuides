@@ -45,6 +45,7 @@
 	}
 	button {
 		cursor: pointer;
+		margin: 0 0.5rem;
 		padding: 0.5rem;
 		background-color: transparent;
 		color: var(--text);
