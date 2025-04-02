@@ -23,7 +23,7 @@
 * {
 	box-sizing: border-box;
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-	user-select: none;
+	/* user-select: none; */
 	transition: 0.2s;
 }
 
@@ -43,6 +43,7 @@ body {
 a, a:visited {
 	color: var(--ac);
 	text-decoration: none;
+	cursor: pointer;
 }
 
 br {

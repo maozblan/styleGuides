@@ -1,91 +1,60 @@
 <script lang="ts">
   import { base } from "$app/paths";
-	import { page } from "$app/state";
-	import "@fontsource/anton";
-	import "@fontsource/lato";
+  import { page } from "$app/state";
+  import "@fontsource/anton";
+  import "@fontsource/lato";
 
-	const pages: string[] = [
-		"start",
-		"color",
-		"effects",
-		"items",
-		"characters",
-		"buildings",
-		"splashes",
-	];
+  let { children } = $props();
 
-	let { children } = $props();
+  const pages: string[] = ["art"];
+  console.log(page.url.pathname, base);
 </script>
 
-<div class="col everything-bagel">
-	<div id="header">
-		<h1>style guide for galactic coffee shop</h1>
-		<p>tl;dr - make it simple and blocky with minimal colors and no lines</p>
-	</div>
+{#key page.url.pathname}
+  {#if [`${base}`, "/"].includes(page.url.pathname)}
+		 <div class="col everything-bagel">
 
-	<div id="content" class="row">
-		<nav class="col">
-			{#each pages as p (p)}
-				<a href="{base}/{p}" class:active={page.url.pathname === `${base}/${p}`}>{p}</a>
-			{/each}
-		</nav>
-		<div class="col">
-			{@render children()}
-		</div>
-	</div>
-</div>
+    <h1>style guides for galactic coffee shop</h1>
+    <p>mostly a hub to collect style guides in one place</p>
+    <br />
+
+    <div class="row">
+      {#each pages as p (p)}
+        <a href="{base}/{p}">
+          <button>{p}</button>
+        </a>
+      {/each}
+    </div>
+
+		 </div>
+  {:else}
+    {@render children()}
+  {/if}
+{/key}
 
 <style>
-	div.everything-bagel {
+	 .everything-bagel {
 		height: 100%;
 		width: 100%;
+		justify-content: center;
+		align-items: center;
 		overflow: hidden;
 	}
-	h1 {
-		font-family: "Anton", sans-serif;
-	}
-	p {
-		font-family: "Lato", sans-serif;
-	}
-	#header {
-		margin-bottom: 1rem;
-		h1,
-		p {
-			text-align: center;
-		}
-	}
-	#content {
-		flex-grow: 1;
-		height: 0;
-
-		nav {
-			width: 20%;
-			height: 100%;
-			a {
-				color: var(--text);
-				padding: 1rem 1rem;
-				font-family: "Anton", sans-serif;
-				font-stretch: expanded;
-				letter-spacing: 0.1rem;
-				text-align: left;
-				text-decoration: none;
-				&:hover,
-				&:active {
-					text-decoration: none;
-					color: var(--ac);
-				}
-				&.active {
-					color: var(--ac);
-					text-align: right;
-				}
-			}
-		}
-		& > div {
-			width: 80%;
-			height: 100%;
-			border-left: 0.5rem solid var(--ac);
-			padding: 1rem;
-			overflow: auto;
-		}
-	}
+  h1 {
+    font-family: "Anton", sans-serif;
+  }
+  * {
+    font-family: "Lato", sans-serif;
+  }
+  button {
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--text);
+    &:hover {
+      border-color: var(--ac);
+      color: var(--ac);
+    }
+  }
 </style>
